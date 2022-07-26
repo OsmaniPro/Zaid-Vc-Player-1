@@ -156,8 +156,8 @@ async def play(c: Client, m: Message):
                       InlineKeyboardButton("⏭️", "skip"),
                       InlineKeyboardButton("▶️", callback_data="cbresume"),
                   ],[
-                      InlineKeyboardButton(text="✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                      InlineKeyboardButton(text="📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                      InlineKeyboardButton(text="🇸🇴 ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                      InlineKeyboardButton(text="🎧 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
                   ],[
                       InlineKeyboardButton("🗑", callback_data="cls")],
                   ]
@@ -269,7 +269,7 @@ async def play(c: Client, m: Message):
         if len(m.command) < 2:
          await m.reply_photo(
                      photo=f"{CMD_IMG}",
-                    caption="💬**Usage: /play Give a Title Song To Play Music or /vplay for Video Play**"
+                    caption="💬**Usage: /play Salaxsanaag Isaar Dontixubiga Ama /vplay Salax sanaag isaar donti xubiga **"
                     ,
                       reply_markup=InlineKeyboardMarkup(
                     [
@@ -286,7 +286,7 @@ async def play(c: Client, m: Message):
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await suhu.edit("💬 **no results found.**")
+                await suhu.edit("💬 **Lama Helin Dalabkaaga Fadlan Isku Day Dalab Saxa🤥.**")
             else:
                 songname = search[0]
                 title = search[0]
@@ -374,9 +374,9 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=image,
-                                caption=f"🏷 **Name:** [{songname[:22]}]({url})\n**⏱ Duration:** `{duration}`\n💡 **Status:** `Playing`\n🎧 **Request by:** {requester}",
+                                caption=f"🏷 **Name:** [{songname[:22]}]({url})\n**⏱ Muddada:** `{duration}`\n💡 **Xaalada:** `Dalabka`\n🎧 **Codsiga by:** {requester}",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
                             await suhu.delete()
-                            await m.reply_text(f"💬 error: `{ep}`")
+                            await m.reply_text(f"🙄 Error Ayaa Jira: `{ep}`")
