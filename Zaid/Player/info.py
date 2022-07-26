@@ -2,8 +2,8 @@ from Zaid.main import bot
 from pyrogram import filters
 
 
-OWNER = 1669178360
-sudos = 1450303652
+OWNER = 1008271006
+sudos = 1008271006
 
 @bot.on_message(filters.command("info"))
 def info(_, message):
